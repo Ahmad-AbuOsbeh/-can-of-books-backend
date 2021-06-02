@@ -31,9 +31,13 @@ function proofOfLif(req, res) {
     res.send(x);
 }
 
-//connect mongo with express server
-mongoose.connect('mongodb://localhost:27017/books',
-    { useNewUrlParser: true, useUnifiedTopology: true });
+//connect mongo with express server locally
+// mongoose.connect('mongodb://localhost:27017/books',
+//     { useNewUrlParser: true, useUnifiedTopology: true });
+
+    //connect mongo with express server deloyed
+mongoose.connect(process.env.MONGODB_URI ,
+{ useNewUrlParser: true, useUnifiedTopology: true });
 
 //create collection #1 
 
