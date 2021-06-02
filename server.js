@@ -112,7 +112,7 @@ function seadUserCollections() {
 
 }
 
-// seadUserCollections();
+seadUserCollections();
 
 
 //recieve this request and send the response for the client
